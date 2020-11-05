@@ -1,0 +1,38 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar style="background-color: cornflowerblue; color: white"><mat-icon matPrefix class="icon" >menu</mat-icon>Menu</mat-toolbar>
+    <mat-nav-list >
+      <h2></h2>
+      <a mat-list-item href="http://localhost:4200/cuenta"> <mat-icon matPrefix class="icon">account_box</mat-icon>Mi cuenta</a>
+      <a mat-list-item href="http://localhost:4200/sos"> <mat-icon matPrefix class="icon">record_voice_over</mat-icon>Contacto SOS</a>
+      <a mat-list-item href="http://localhost:4200/historial"> <mat-icon matPrefix class="icon">assignment</mat-icon>Historial Médico</a>
+      <a mat-list-item href="http://localhost:4200/chat"> <mat-icon matPrefix class="icon">question_answer</mat-icon>Consultar doctor</a>
+      <mat-divider style="padding:10px;"></mat-divider>
+      <h2>Planes</h2>
+      <a mat-list-item href="http://localhost:4200/mi-dieta"><mat-icon matPrefix class="icon">local_dining</mat-icon>Mi Dieta</a>
+      <a mat-list-item href="http://localhost:4200/mi-rutina"><mat-icon matPrefix class="icon">fitness_center</mat-icon>Mi Rutina</a>
+      <mat-divider style="padding:10px;"></mat-divider>
+      <a mat-list-item href="http://localhost:4200/audios"><mat-icon matPrefix class="icon">headset</mat-icon>Relájate</a>
+      <mat-divider style="padding:10px;"></mat-divider>
+      <a mat-list-item href="http://localhost:4200/"><mat-icon matPrefix class="icon">exit_to_app</mat-icon>Cerrar Sesión</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar class="general" style="position: fixed;">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async"> 
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span (click)="goTo('/dashboard')">Fit Your Immune &nbsp;<mat-icon matPrefix class="icon">flare</mat-icon></span>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

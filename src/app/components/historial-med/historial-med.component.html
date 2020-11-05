@@ -1,0 +1,72 @@
+
+  <mat-horizontal-stepper #stepper class="step" style="margin-top: 100px;">
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="formGroup">
+        <ng-template matStepLabel>Información Médica General</ng-template>
+        <mat-form-field appearance="fill"> 
+            <mat-label>Fecha de Nacimiento</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="fecha_nac">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Peso</mat-label>
+            <input matInput formControlName="peso" required>
+            <mat-icon matPrefix class="icon">accessibility</mat-icon>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <mat-label>Altura</mat-label>
+            <input matInput formControlName="altura" required>
+            <mat-icon matPrefix class="icon">accessibility_new</mat-icon>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext class="button">Siguiente</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" label="Información específica">
+      <form [formGroup]="formGroup">
+        <mat-label>¿Ha tenido cirujías en el último año?</mat-label>
+        <br>
+          <mat-radio-group label="¿Ha tenido cirujías en el último año?" class="radio">
+            <mat-radio-button class="radio" value="1">Sí</mat-radio-button>
+            <mat-radio-button class="radio" value="2">No</mat-radio-button>
+          </mat-radio-group>
+        <br>
+          <mat-label>¿Ha tenido algún trauma físico en el último año? (Ejemplo: fracturas, esguinces, etc.)</mat-label>
+        <br>
+          <mat-radio-group label="¿Ha tenido cirujías en el último año?" class="radio">
+            <mat-radio-button value="1" class="radio">Sí</mat-radio-button>
+            <mat-radio-button value="2" class="radio">No</mat-radio-button>
+          </mat-radio-group>
+          <br>
+          <mat-label>¿Ha tenido alguna infección en los últimos 3 meses?</mat-label>
+        <br>
+          <mat-radio-group label="¿Ha tenido cirujías en el último año?" class="radio">
+            <mat-radio-button value="1" class="radio">Sí</mat-radio-button>
+            <mat-radio-button value="2" class="radio">No</mat-radio-button>
+          </mat-radio-group>
+          <br>
+          <mat-form-field>
+              <mat-label>Medicamentos que toma actualmente</mat-label>
+              <textarea matInput formControlName="medicamentosactuales" required style="width:100%"></textarea>
+          </mat-form-field>
+        
+        <div>
+          <button mat-button matStepperPrevious>Atrás</button>
+          <button mat-button matStepperNext class="button">Siguiente</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Listo!</ng-template>
+      <p>Se ha creado su historial médico. Ahora puedes generar tu plan alimenticio. </p>
+      <div>
+        <button mat-button matStepperPrevious>Atrás</button>
+        <button mat-button (click)="stepper.reset()" class="button" (click)="save()">Aceptar</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+  

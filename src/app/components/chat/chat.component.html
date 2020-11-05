@@ -1,0 +1,21 @@
+<mat-grid-list cols=8 rowHeight="30%">
+      <br>
+     <div>
+      <mat-grid-tile colspan="8" rowspan="3">
+        <form [formGroup]="formGroup" class="form">
+          <div>
+            <mat-form-field class="input">
+              <mat-label>Colegiado</mat-label>
+              <input type="text" matInput formControlName="nombre">
+              <mat-icon matPrefix class="icon">article</mat-icon>
+            </mat-form-field>
+          <br>
+        </div>
+          <div>
+           <button mat-raised-button mat-dialog-close color="primary" class="button" (click)="goTo('/chatInit')">Entrar al chat</button>
+          </div>
+        </form>
+      </mat-grid-tile>
+    </div>
+  </mat-grid-list>
+  

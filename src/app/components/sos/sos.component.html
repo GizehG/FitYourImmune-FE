@@ -1,0 +1,33 @@
+<mat-grid-list cols=8 rowHeight="30%">
+    <mat-grid-tile colspan="2"></mat-grid-tile>
+     <br>
+     <div>
+      <mat-grid-tile colspan="4" rowspan="3">
+        <form [formGroup]="formGroup" class="form">
+          <div>
+            <mat-form-field class="input">
+              <mat-label>Contacto SOS</mat-label>
+              <input type="text" matInput formControlName="nombreSOS">
+              <mat-icon matPrefix class="icon">record_voice_over</mat-icon>
+            </mat-form-field>
+          <br>
+            <mat-form-field class="input">
+              <mat-label>Telefono</mat-label>
+              <input type="text" matInput formControlName="telefono">
+              <mat-icon matPrefix class="icon">phone</mat-icon>
+            </mat-form-field>
+            <mat-form-field class="input">
+              <mat-label>Email</mat-label>
+              <input type="text" matInput formControlName="email">
+              <mat-icon matPrefix class="icon">email</mat-icon>
+            </mat-form-field>
+            
+          </div>
+          <div>
+           <button mat-raised-button color="primary" class="button" (click)="save()">Guardar</button>
+          </div>
+        </form>
+      </mat-grid-tile>
+    </div>
+  </mat-grid-list>
+  

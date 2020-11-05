@@ -1,0 +1,68 @@
+<mat-horizontal-stepper #stepper class="step" style="margin: 40px; margin-top: 100px;">
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Información General</ng-template>
+      <mat-label>¿Cuántos días a la semana le gustaría entrenar?</mat-label>
+      <br>
+      <mat-radio-group label="¿Cuántas porciones al día le gustaría tener?" class="radio">
+        <mat-radio-button value="1" class="radio">3 días</mat-radio-button>
+        <mat-radio-button value="2" class="radio">5 días</mat-radio-button>
+        <mat-radio-button value="3" class="radio">7 días</mat-radio-button>
+      </mat-radio-group>
+        <br>
+        <mat-form-field class="input2">
+          <mat-label>Peso Ideal</mat-label>
+          <input type="text" matInput formControlName="nombre" placeholder="Debe estar en libras">
+          <mat-icon matPrefix class="icon">accessibility_new</mat-icon>
+        </mat-form-field>
+      <br>
+      <mat-form-field class="">
+        <mat-label>Tiempo disponible al día en promedio</mat-label>
+        <input type="text" matInput formControlName="telefono">
+        <mat-icon matPrefix class="icon">av_timer</mat-icon>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="">
+      <mat-label>Hora para ejercitarse</mat-label>
+        <input type="time" matInput formControlName="email">
+        <mat-icon matPrefix class="icon">access_alarm</mat-icon>
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperNext class="button">Siguiente</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup" label="Personalizar Rutina">
+    <form [formGroup]="secondFormGroup">
+      <mat-label>La rutina de ejercicios que necesita contiene algunos de los siguientes ejercicios. Si usted desea eliminar alguno, por favor hágalo de la lista y presione el boton continuar.</mat-label>
+       <mat-form-field class="example-chip-list" class="fill">
+         <mat-chip-list #chipList aria-label="Fruit selection">
+          <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable"
+                   [removable]="removable" (removed)="remove(fruit)">
+            {{fruit.name}}
+            <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+          </mat-chip>
+          <input appearance="fill" class="fill" placeholder="New fruit..."
+                 [matChipInputFor]="chipList"
+                 [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                 [matChipInputAddOnBlur]="addOnBlur"
+                 (matChipInputTokenEnd)="add($event)">
+        </mat-chip-list>
+      </mat-form-field>
+       <br>
+      <div>
+        <button mat-button matStepperPrevious>Atrás</button>
+        <button mat-button matStepperNext class="button">Siguiente</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Listo!</ng-template>
+    <p>Se ha generado su plan de ejercicios. Todo listo para iniciar.</p>
+    <div>
+      <button mat-button matStepperPrevious>Atrás</button>
+      <button mat-button (click)="stepper.reset()" class="button" (click)="goTo('/')">Iniciar Sesión</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>
+

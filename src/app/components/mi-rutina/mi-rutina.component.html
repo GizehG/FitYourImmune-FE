@@ -1,0 +1,187 @@
+<mat-grid-list cols=8 rowHeight="22%" style="margin-top: 100px;">
+    <br>
+    <mat-grid-tile colspan="4">
+        <mat-accordion class="accordion">
+            <mat-expansion-panel hideToggle class="accordion">
+              <mat-expansion-panel-header>
+                <mat-panel-title class="title">
+                  Lunes
+                </mat-panel-title>
+                <mat-panel-description>
+                  Cardio
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+            </mat-expansion-panel>
+            <mat-expansion-panel class="accordion" (opened)="panelOpenState = true"
+                                 (closed)="panelOpenState = false">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Rutina del día
+                </mat-panel-title>
+                <mat-panel-description>
+                  Descripcion
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>I'm visible because I am open</p>
+            </mat-expansion-panel>
+          </mat-accordion>
+        
+        <br>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="4">
+        <mat-card class="card">
+            <mat-card-content>
+              <h2 class="example-h2">Detalles y Especificaciones </h2>
+              <section class="example-section" *ngIf="mode === 'determinate'">
+                <label class="example-margin">Tiempo de rutina:</label>
+                <br>
+                <label class="example-margin">Hora para entrenar:</label>
+                <mat-slider class="example-margin" [(ngModel)]="value"></mat-slider>
+              </section>
+            </mat-card-content>
+          </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="4">
+      <mat-accordion class="accordion">
+        <mat-expansion-panel hideToggle class="accordion">
+          <mat-expansion-panel-header>
+            <mat-panel-title class="title">
+              Martes
+            </mat-panel-title>
+            <mat-panel-description>
+              Flexibilidad
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+        </mat-expansion-panel>
+        <mat-expansion-panel class="accordion" (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Rutina del día
+            </mat-panel-title>
+            <mat-panel-description>
+              Descripcion
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>I'm visible because I am open</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    
+        
+        <br>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="4">
+        <mat-card>
+            <mat-card-content>
+              <h2 class="example-h2">Días</h2>
+          
+              <mat-progress-spinner style="color: #b633c4;"
+                  class="example-margin"
+                  
+                  [mode]="mode"
+                  [value]="value">
+              </mat-progress-spinner>
+            </mat-card-content>
+          </mat-card>          
+    </mat-grid-tile>
+    <mat-grid-tile colspan="4">
+      <mat-accordion class="accordion">
+        <mat-expansion-panel hideToggle class="accordion">
+          <mat-expansion-panel-header>
+            <mat-panel-title class="title">
+              Miércoles
+            </mat-panel-title>
+            <mat-panel-description>
+              Fuerza
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+        </mat-expansion-panel>
+        <mat-expansion-panel class="accordion" (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Rutina del día
+            </mat-panel-title>
+            <mat-panel-description>
+              Descripcion
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>I'm visible because I am open</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    
+        
+        <br>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="4"></mat-grid-tile>
+    <mat-grid-tile colspan="4">
+      <mat-accordion class="accordion">
+        <mat-expansion-panel hideToggle class="accordion">
+          <mat-expansion-panel-header>
+            <mat-panel-title class="title">
+              Jueves
+            </mat-panel-title>
+            <mat-panel-description>
+              Resistencia
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+        </mat-expansion-panel>
+        <mat-expansion-panel class="accordion" (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Rutina del día
+            </mat-panel-title>
+            <mat-panel-description>
+              Descripcion
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>I'm visible because I am open</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    
+        
+        <br>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="4"></mat-grid-tile>
+    <mat-grid-tile colspan="4">
+      <mat-accordion class="accordion">
+        <mat-expansion-panel hideToggle class="accordion">
+          <mat-expansion-panel-header>
+            <mat-panel-title class="title">
+              Viernes
+            </mat-panel-title>
+            <mat-panel-description>
+              Libre
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+        </mat-expansion-panel>
+        <mat-expansion-panel class="accordion" (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Rutina del día
+            </mat-panel-title>
+            <mat-panel-description>
+              Descripcion
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>I'm visible because I am open</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    
+    
+        
+        <br>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="4"></mat-grid-tile>
+
+   
+</mat-grid-list>
+
+

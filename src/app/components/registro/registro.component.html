@@ -1,0 +1,47 @@
+<mat-grid-list cols=8 rowHeight="26%">
+     <br>
+     <div>
+      <mat-grid-tile colspan="8" rowspan="4">
+        <form [formGroup]="formGroup" class="form">
+          <div>
+            <mat-form-field class="input">
+              <mat-label>DPI</mat-label>
+              <input type="text" matInput formControlName="dpi" placeholder="">
+              <mat-icon matPrefix class="icon">picture_in_picture</mat-icon>
+            </mat-form-field>
+            <mat-form-field class="input">
+              <mat-label>Nombre</mat-label>
+              <input type="text" matInput formControlName="nombre" placeholder="">
+              <mat-icon matPrefix class="icon">person</mat-icon>
+            </mat-form-field>
+          <br>
+            <mat-form-field class="input">
+              <mat-label>Apellido</mat-label>
+              <input type="text" matInput formControlName="apellido">
+              <mat-icon matPrefix class="icon">person</mat-icon>
+            </mat-form-field>
+            <mat-form-field class="input">
+              <mat-label>Telefono</mat-label>
+              <input type="tel" matInput formControlName="telefono">
+              <mat-icon matPrefix class="icon">phone</mat-icon>
+            </mat-form-field>
+            <mat-form-field class="input">
+              <mat-label>Email</mat-label>
+              <input type="email" matInput formControlName="email">
+              <mat-icon matPrefix class="icon">email</mat-icon>
+            </mat-form-field>
+            <mat-form-field class="input">
+              <mat-label>Contraseña</mat-label>
+              <input type="password" matInput formControlName="contrasena">
+              <mat-icon matPrefix class="icon">lock</mat-icon>
+            </mat-form-field>
+          </div>
+          <div>
+           <button mat-raised-button color="primary" class="button" (click)="goTo('/')">Regresar</button>
+           <button mat-raised-button color="primary" class="button" (click)="save()">Guardar Cuenta</button>
+          </div>
+        </form>
+      </mat-grid-tile>
+    </div>
+  </mat-grid-list>
+  

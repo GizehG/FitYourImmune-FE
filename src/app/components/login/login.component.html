@@ -1,0 +1,28 @@
+<mat-grid-list cols=6 >
+    <mat-grid-tile colspan="6" rowspan="3">
+      <!-- <img src="../../../assets/img/FYInew.png" > -->
+      <br>
+      <form [formGroup]="formGroup" class="form">
+        <div>
+          <img src="../../../assets/img/fyi.png" width="350" height="350" alt="">
+        </div>
+        <div>
+          <mat-form-field class="input">
+            <mat-label>Usuario</mat-label>
+            <input type="text" matInput formControlName="dpi">
+            <mat-icon matPrefix class="icon">person</mat-icon>
+          </mat-form-field>
+        <br>
+          <mat-form-field class="input">
+            <mat-label>Contraseña</mat-label>
+            <input type="text" matInput formControlName="contrasena">
+            <mat-icon matPrefix class="icon">lock</mat-icon>
+          </mat-form-field>
+        </div>
+        <div>
+          <button mat-raised-button class="button" (click)="goTo('/cuenta')">Ingresar</button>
+          <button mat-raised-button class="button" (click)="goTo('/registro')">Registrarme</button>
+        </div>
+      </form>
+    </mat-grid-tile>
+  </mat-grid-list>

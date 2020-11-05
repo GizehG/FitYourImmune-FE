@@ -1,0 +1,35 @@
+.input{
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.fill{
+    width: 100%;
+}
+
+.button{
+   
+    margin-left: 5px;
+    margin-right: 5px;
+    color: white;
+    background-color: cornflowerblue;
+}
+.form{
+    margin-top: 0px;
+}
+
+.icon{
+    margin-right: 10px;
+}
+
+.mat-stepper-horizontal {
+    margin-top: 8px;
+  }
+  
+  .mat-form-field {
+    margin-top: 16px;
+  }
+  .radio{
+    margin: 15px;
+}
