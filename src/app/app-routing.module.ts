@@ -14,6 +14,7 @@ import { MiRutinaComponent } from './components/mi-rutina/mi-rutina.component';
 import { MiDietaComponent } from './components/mi-dieta/mi-dieta.component';
 import { ChatComponent } from './components/chat/chat.component';
 import {MiChatComponent} from './components/mi-chat/mi-chat.component';
+import { HistorialComponent } from './components/historial/historial.component';
 
 const routes: Routes = [
   {path: 'registro', component: RegistroComponent},
@@ -29,7 +30,8 @@ const routes: Routes = [
   {path: '', component:LoginComponent},
   {path: 'cuenta', component:CuentaComponent},
   {path:'sos', component:SOSComponent},
-  {path:'chatInit', component: MiChatComponent}
+  {path:'chatInit', component: MiChatComponent},
+  {path: 'mi-historial', component:HistorialComponent}
 ];
 
 @NgModule({

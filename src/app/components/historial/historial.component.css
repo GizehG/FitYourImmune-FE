@@ -1,0 +1,9 @@
+.example-card {
+    width: 310px;
+    height: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('../../../assets/img/health.png');
+    background-size: cover;
+  }

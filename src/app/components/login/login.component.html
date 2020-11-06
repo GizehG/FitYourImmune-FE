@@ -9,18 +9,18 @@
         <div>
           <mat-form-field class="input">
             <mat-label>Usuario</mat-label>
-            <input type="text" matInput formControlName="dpi">
+            <input type="text" matInput formControlName="email">
             <mat-icon matPrefix class="icon">person</mat-icon>
           </mat-form-field>
         <br>
           <mat-form-field class="input">
             <mat-label>Contraseña</mat-label>
-            <input type="text" matInput formControlName="contrasena">
+            <input type="text" matInput formControlName="passwd">
             <mat-icon matPrefix class="icon">lock</mat-icon>
           </mat-form-field>
         </div>
         <div>
-          <button mat-raised-button class="button" (click)="goTo('/cuenta')">Ingresar</button>
+          <button mat-raised-button class="button" (click)="login()">Ingresar</button>
           <button mat-raised-button class="button" (click)="goTo('/registro')">Registrarme</button>
         </div>
       </form>

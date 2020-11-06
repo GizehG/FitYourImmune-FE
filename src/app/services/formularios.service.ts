@@ -18,6 +18,25 @@ export class FormulariosService {
 
   constructor(private http: HttpClient) { }
 
+  login(credenciales): Observable<any>{
+    let url = dominio+"/login";
+    return this.http.post(url,credenciales, HttpHeader);
+  }
+
+  isLogin(){
+    let islog =localStorage.getItem("isLogin") === "Accepted";
+    return islog;
+  }
+
+  guardarToken(){
+    localStorage.setItem("isLogin","Accepted");
+  }
+
+  logout(){
+    localStorage.removeItem("isLogin");
+  }
+
+
   savePaciente(datos):Observable<any>{
     let url = dominio + '/paciente';
     return this.http.post(url,datos, HttpHeader);

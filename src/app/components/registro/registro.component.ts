@@ -20,7 +20,7 @@ export class RegistroComponent implements OnInit {
       apellido: [''], 
       telefono: [''],
       email:[''], 
-      contrasena:[''],
+      passwd:[''],
       colegiado:['12345']
     });
   }

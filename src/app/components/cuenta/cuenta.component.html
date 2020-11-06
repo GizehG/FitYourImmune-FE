@@ -1,8 +1,9 @@
 <mat-grid-list cols=8 rowHeight="23%">
     <mat-grid-tile colspan="8"></mat-grid-tile>
-     <br>
+     <br> 
      <div>
-      <mat-grid-tile colspan="8" rowspan="3">
+      <mat-grid-tile colspan="1"></mat-grid-tile>
+      <mat-grid-tile colspan="4" rowspan="3">
         <form [formGroup]="formGroup" class="form">
           <div>
             <mat-form-field class="input">
@@ -37,6 +38,29 @@
           </div>
         </form>
       </mat-grid-tile>
+
+      <mat-grid-tile colspan="3" rowspan="3">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Usuario</mat-card-title>
+            <mat-card-subtitle>Información</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="../../../assets/img/user.png">
+          <mat-card-content>
+            <p>
+            Plan Alimenticio: Activo
+            <br>
+            Plan de Ejercicios: Activo
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            
+          </mat-card-actions>
+        </mat-card>
+      </mat-grid-tile>
+
+      
     </div>
   </mat-grid-list>
   
