@@ -1,9 +1,14 @@
 .example-card {
-    width: 310px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
   }
   
   .example-header-image {
     background-image: url('../../../assets/img/health.png');
     background-size: cover;
+    margin: 15px;
+  }
+
+  .icon{
+    margin: 10px;
   }

@@ -2,39 +2,51 @@
     <mat-grid-tile colspan="8" rowspan="1"></mat-grid-tile>
     <mat-grid-tile colspan="3" rowspan="3">
         <mat-card class="example-card">
-          <mat-card-header>
+          <mat-card-header style="margin: 15px;">
             <div mat-card-avatar class="example-header-image"></div>
             <mat-card-title>Información General</mat-card-title>
             <mat-card-subtitle>Información</mat-card-subtitle>
           </mat-card-header>
+          <mat-divider></mat-divider>
           <!-- <img mat-card-image src="../../../assets/img/user.png"> -->
           <mat-card-content>
-            <p>
-            Plan Alimenticio: Activo
             <br>
-            Plan de Ejercicios: Activo
-            </p>
+            <mat-icon matPrefix class="icon">calendar_today</mat-icon>
+            <mat-label>Fecha de Nacimiento: </mat-label>
+            <br>
+            <mat-icon matPrefix class="icon">accessibility</mat-icon>
+            <mat-label>Peso:</mat-label>
+            <br>
+            <mat-icon matPrefix class="icon">accessibility_new</mat-icon>
+            <mat-label>Altura:</mat-label>
           </mat-card-content>
           <mat-card-actions>
-            
           </mat-card-actions>
         </mat-card>
       </mat-grid-tile>
       <mat-grid-tile colspan="1" rowspan="3"></mat-grid-tile>
       <mat-grid-tile colspan="3" rowspan="3">
         <mat-card class="example-card">
-          <mat-card-header>
+          <mat-card-header style="margin: 15px;">
             <div mat-card-avatar class="example-header-image"></div>
             <mat-card-title>Información Específica</mat-card-title>
             <mat-card-subtitle>Información</mat-card-subtitle>
           </mat-card-header>
+          <mat-divider style="color: rgb(77, 25, 25)"></mat-divider>
           <!-- <img mat-card-image src="../../../assets/img/user.png"> -->
           <mat-card-content>
-            <p>
-            Plan Alimenticio: Activo
+           <br>
+            <mat-icon matPrefix class="icon">healing</mat-icon>
+            <mat-label>Cirugías: </mat-label>
             <br>
-            Plan de Ejercicios: Activo
-            </p>
+            <mat-icon matPrefix class="icon">sentiment_very_dissatisfied</mat-icon>
+            <mat-label>Traumas Físicos:</mat-label>
+            <br>
+            <mat-icon matPrefix class="icon">sick</mat-icon>
+            <mat-label>Infecciones:</mat-label>
+            <br>
+            <mat-icon matPrefix class="icon">business_center</mat-icon>
+            <mat-label>Medicamentos:</mat-label>
           </mat-card-content>
           <mat-card-actions>
             
