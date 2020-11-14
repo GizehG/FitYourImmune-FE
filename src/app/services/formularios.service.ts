@@ -36,6 +36,15 @@ export class FormulariosService {
     localStorage.removeItem("isLogin");
   }
 
+  getDoctores():Observable<any>{
+    let url = dominio + '/doctor';
+    return this.http.get(url,HttpHeader);
+  }
+
+  getAudios():Observable<any>{
+    let url = dominio + '/audios';
+    return this.http.get(url,HttpHeader);
+  }
 
   savePaciente(datos):Observable<any>{
     let url = dominio + '/paciente';

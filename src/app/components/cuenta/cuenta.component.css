@@ -28,7 +28,8 @@
   }
   
   .example-card {
-    max-width: 210px;
+    width: 50%;
+    
   }
   
   .example-header-image {

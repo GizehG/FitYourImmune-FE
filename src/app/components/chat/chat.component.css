@@ -10,5 +10,21 @@
     font-size: 14px;
     width: 100%;
   }
+
+  .example-card {
+    max-width: 600px;
+  }
   
- 
+  .example-header-image {
+    background-image: url('../../../assets/img/mini_doctor.png');    
+     background-size: cover;
+  }
+  
+  .icon{
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  .image{
+    width: 100%;
+  }

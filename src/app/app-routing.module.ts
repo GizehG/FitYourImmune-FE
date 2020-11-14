@@ -25,7 +25,7 @@ const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
   {path: 'historial', component: HistorialMedComponent},
   {path: 'audios', component: AudiosComponent},
-  {path: 'chat', component: ChatDoctorComponent},
+  {path: 'doctores', component: ChatDoctorComponent},
   {path: 'chats', component: ChatComponent},
   {path: '', component:LoginComponent},
   {path: 'cuenta', component:CuentaComponent},

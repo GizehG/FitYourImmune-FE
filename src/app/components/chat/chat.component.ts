@@ -20,6 +20,11 @@ export class ChatComponent implements OnInit {
       contrasena:['']
     });
   }
+
+  newConsulta(){
+    this.goTo("http://localhost:8080/");
+  }
+
   goTo(ruta: string){
     this.route.navigateByUrl(ruta); 
   }
