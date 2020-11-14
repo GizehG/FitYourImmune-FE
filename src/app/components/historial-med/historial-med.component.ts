@@ -2,19 +2,26 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FormulariosService } from 'src/app/services/formularios.service';
-
+ 
 @Component({
   selector: 'app-historial-med',
   templateUrl: './historial-med.component.html',
   styleUrls: ['./historial-med.component.css']
 })
 export class HistorialMedComponent implements OnInit {
-  formGroup: FormGroup;
+  formGroup: FormGroup; 
   secondFormGroup: FormGroup; 
 
-  constructor(private fb:FormBuilder,  private route:Router, private formService: FormulariosService) { }
+  favoriteSeason: string;
+  cirujias: string[] = ['Sí', 'No'];
+
+  constructor(private fb:FormBuilder,  private route:Router, public formService: FormulariosService) { }
 
   ngOnInit(): void {
+    // if(!this.formService.isLogin()){
+    //   this.route.navigateByUrl('/');
+    // }
+
     this.formGroup = this.fb.group({
       id:[''],
       fecha_nac:[''],
@@ -26,8 +33,8 @@ export class HistorialMedComponent implements OnInit {
       infecciones:[''],
       dpi:['232232000000']
     });
-    this.secondFormGroup = this.fb.group({
-      secondCtrl: ['', Validators.required]
+    this.secondFormGroup=this.fb.group({
+
     });
   }
 

@@ -21,16 +21,16 @@ export class RegistroComponent implements OnInit {
       telefono: [''],
       email:[''], 
       passwd:[''],
-      colegiado:['12345']
+      colegiado:['']
     });
-  }
+  } 
 
   //Guardando datos
   save(){
     this.formService.savePaciente(this.formGroup.value).subscribe((data)=>{
     })
     this.formGroup.reset();
-    this.goTo('/historial');
+    this.goTo('/sos');
   }
 
   //Metodo para rutas

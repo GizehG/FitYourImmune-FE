@@ -27,12 +27,12 @@
     margin-top: 16px;
   }
   
+
   .example-card {
-    width: 50%;
-    
+    max-width: 600px;
   }
   
   .example-header-image {
-    background-image: url('../../../assets/img/user.png');
+    background-image: url('../../../assets/img/woman.png');
     background-size: cover;
   }

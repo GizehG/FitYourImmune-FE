@@ -20,12 +20,16 @@ export class ChatDoctorComponent implements OnInit{
   displayedColumns: string[] = ['colegiado', 'nombreDoc', 'email', 'telefono', 'direccion', 'especialidad'];
   dataSource: MatTableDataSource<Doctor> = new MatTableDataSource(this.formularioList);
  
-  constructor( private fb: FormBuilder, private route:Router, public dialog: MatDialog, private formService: FormulariosService) {
+  constructor( private fb: FormBuilder, private route:Router, public dialog: MatDialog, public formService: FormulariosService) {
     
   }
   
 
   ngOnInit() {
+
+    if(!this.formService.isLogin()){
+      this.route.navigateByUrl('/');
+    }
 
     this.formService.getDoctores().subscribe((data) => {
       if (data.length > 0) {

@@ -1,0 +1,29 @@
+<mat-grid-list cols=8 rowHeight="33%">
+    <br>
+   <div>
+    <mat-grid-tile colspan="2" rowspan="3" style="margin-left: 50px;">
+      <mat-card class="example-card" style="margin-top: 75px; width: 500px;">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Contacto SOS</mat-card-title>
+          <mat-card-subtitle>Información</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image style="height: 250px;" src="../../../assets/img/friends.png">
+        <mat-card-content>
+          <p>Nombre:</p>
+          <p>Teléfono:</p>
+          <p> Email:</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <a href="http://localhost:8080"> <mat-icon matPrefix class="icon">question_answer</mat-icon>Nueva Consulta</a>
+          <a href="http://localhost:4200/doctores"> <mat-icon matPrefix class="icon">search</mat-icon>Buscar Doctor</a>
+          <!-- <button mat-button (click)="goTo('/doctores')">Buscar doctor</button> -->
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="3"></mat-grid-tile>
+    <mat-grid-tile colspan="5" rowspan="3" style="margin-top: 35px;">
+      <img class="image" src="../../../assets/img/sos.png" alt="">
+    </mat-grid-tile>
+  </div>
+</mat-grid-list>

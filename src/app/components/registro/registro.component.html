@@ -5,6 +5,11 @@
         <form [formGroup]="formGroup" class="form">
           <div>
             <mat-form-field class="input">
+              <mat-label>Colegiado (sólo el doctor puede llenar este campo)</mat-label>
+              <input type="text" matInput formControlName="colegiado" placeholder="">
+              <mat-icon matPrefix class="icon">picture_in_picture</mat-icon>
+            </mat-form-field>
+            <mat-form-field class="input">
               <mat-label>DPI</mat-label>
               <input type="text" matInput formControlName="dpi" placeholder="">
               <mat-icon matPrefix class="icon">picture_in_picture</mat-icon>
@@ -21,7 +26,7 @@
               <mat-icon matPrefix class="icon">person</mat-icon>
             </mat-form-field>
             <mat-form-field class="input">
-              <mat-label>Telefono</mat-label>
+              <mat-label>Telefono</mat-label> 
               <input type="tel" matInput formControlName="telefono">
               <mat-icon matPrefix class="icon">phone</mat-icon>
             </mat-form-field>

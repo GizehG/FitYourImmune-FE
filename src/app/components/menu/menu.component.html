@@ -1,13 +1,13 @@
-<mat-sidenav-container class="sidenav-container">
+<mat-sidenav-container class="sidenav-container" >
   <mat-sidenav #drawer class="sidenav" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
+      [opened]="(isHandset$ | async) === false" *ngIf="formularioService.isLogin()">
     <mat-toolbar style="background-color: cornflowerblue; color: white"><mat-icon matPrefix class="icon" >menu</mat-icon>Menu</mat-toolbar>
     <mat-nav-list >
       <h2></h2>
       <a mat-list-item href="http://localhost:4200/cuenta"> <mat-icon matPrefix class="icon">account_box</mat-icon>Mi cuenta</a>
-      <a mat-list-item href="http://localhost:4200/sos"> <mat-icon matPrefix class="icon">record_voice_over</mat-icon>Contacto SOS</a>
+      <a mat-list-item href="http://localhost:4200/mi-sos"> <mat-icon matPrefix class="icon">record_voice_over</mat-icon>Contacto SOS</a>
       <a mat-list-item href="http://localhost:4200/mi-historial "> <mat-icon matPrefix class="icon">assignment</mat-icon>Historial Médico</a>
       <a mat-list-item href="http://localhost:4200/chats"> <mat-icon matPrefix class="icon">question_answer</mat-icon>Consultar doctor</a>
       <mat-divider style="padding:10px;"></mat-divider>
@@ -17,7 +17,7 @@
       <mat-divider style="padding:10px;"></mat-divider>
       <a mat-list-item href="http://localhost:4200/audios"><mat-icon matPrefix class="icon">headset</mat-icon>Relájate</a>
       <mat-divider style="padding:10px;"></mat-divider>
-      <a mat-list-item href="http://localhost:4200/"><mat-icon matPrefix class="icon">exit_to_app</mat-icon>Cerrar Sesión</a>
+      <a mat-list-item  href="http://localhost:4200/" (click)="logout()"><mat-icon matPrefix class="icon">exit_to_app</mat-icon>Cerrar Sesión</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ThemePalette} from '@angular/material/core';
 import {ProgressSpinnerMode} from '@angular/material/progress-spinner';
+import { Router } from '@angular/router';
+import { FormulariosService } from 'src/app/services/formularios.service';
 
 @Component({
   selector: 'app-mi-dieta',
@@ -13,9 +15,12 @@ export class MiDietaComponent implements OnInit {
   mode: ProgressSpinnerMode = 'determinate';
   value = 50;
 
-  constructor() { }
+  constructor(private route: Router, public formularioService: FormulariosService) { }
 
   ngOnInit(): void {
+    if(!this.formularioService.isLogin()){
+      this.route.navigateByUrl('/');
+    }
   }
 
 }

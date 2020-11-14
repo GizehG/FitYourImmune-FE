@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
 import {MatChipInputEvent} from '@angular/material/chips';
+import { FormulariosService } from 'src/app/services/formularios.service';
 
 export interface Fruit {
   name: string;
@@ -56,11 +57,18 @@ export class RutinaComponent implements OnInit {
   }
 
 
-  constructor(private fb: FormBuilder, private route:Router) { }
+  constructor(private fb: FormBuilder, private route:Router, public formularioService: FormulariosService) { }
 
   ngOnInit(): void {
+    // if(!this.formularioService.isLogin()){
+    //   this.route.navigateByUrl('/');
+    // }
     this.firstFormGroup = this.fb.group({
-      firstCtrl: ['', Validators.required]
+      pesoIdeal:[''],
+      tiempoDisponible:[''],
+      hora_entreno:[''],
+      dpi:['']
+
     });
     this.secondFormGroup = this.fb.group({
       secondCtrl: ['', Validators.required]

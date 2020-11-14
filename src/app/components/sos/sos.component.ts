@@ -28,6 +28,7 @@ export class SOSComponent implements OnInit {
     this.formService.saveSOS(this.formGroup.value).subscribe((data)=>{
     })
     this.formGroup.reset();
+    this.goTo('/historial');
     
   }
 

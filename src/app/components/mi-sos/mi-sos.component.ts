@@ -3,11 +3,11 @@ import { Router } from '@angular/router';
 import { FormulariosService } from 'src/app/services/formularios.service';
 
 @Component({
-  selector: 'app-contacto-sos',
-  templateUrl: './contacto-sos.component.html',
-  styleUrls: ['./contacto-sos.component.css']
+  selector: 'app-mi-sos',
+  templateUrl: './mi-sos.component.html',
+  styleUrls: ['./mi-sos.component.css']
 })
-export class ContactoSOSComponent implements OnInit {
+export class MiSOSComponent implements OnInit {
 
   constructor(private route: Router, public formularioService: FormulariosService) { }
 

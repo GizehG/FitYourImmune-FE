@@ -25,6 +25,9 @@ export class AudiosComponent implements OnInit {
   constructor(private fb: FormBuilder, private route:Router, private _httpClient: HttpClient, private formService: FormulariosService) { }
   
   ngOnInit() {
+    if(!this.formService.isLogin()){
+      this.route.navigateByUrl('/');
+    }
 
     this.formService.getAudios().subscribe((data) => {
       if (data.length > 0) {

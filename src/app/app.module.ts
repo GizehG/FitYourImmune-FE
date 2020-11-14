@@ -52,6 +52,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { MiChatComponent } from './components/mi-chat/mi-chat.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MiSOSComponent } from './components/mi-sos/mi-sos.component';
 
 
 
@@ -74,7 +75,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     HistorialComponent,
     MiDietaComponent,
     MiRutinaComponent,
-    MiChatComponent
+    MiChatComponent,
+    MiSOSComponent
   ],
   imports: [
     BrowserModule,

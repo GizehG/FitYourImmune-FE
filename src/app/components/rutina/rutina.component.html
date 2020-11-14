@@ -2,29 +2,22 @@
   <mat-step [stepControl]="firstFormGroup">
     <form [formGroup]="firstFormGroup">
       <ng-template matStepLabel>Información General</ng-template>
-      <mat-label>¿Cuántos días a la semana le gustaría entrenar?</mat-label>
-      <br>
-      <mat-radio-group label="¿Cuántas porciones al día le gustaría tener?" class="radio">
-        <mat-radio-button value="1" class="radio">3 días</mat-radio-button>
-        <mat-radio-button value="2" class="radio">5 días</mat-radio-button>
-        <mat-radio-button value="3" class="radio">7 días</mat-radio-button>
-      </mat-radio-group>
         <br>
         <mat-form-field class="input2">
           <mat-label>Peso Ideal</mat-label>
-          <input type="text" matInput formControlName="nombre" placeholder="Debe estar en libras">
+          <input type="text" matInput formControlName="pesoIdeal" placeholder="Debe estar en libras">
           <mat-icon matPrefix class="icon">accessibility_new</mat-icon>
         </mat-form-field>
       <br>
       <mat-form-field class="">
         <mat-label>Tiempo disponible al día en promedio</mat-label>
-        <input type="text" matInput formControlName="telefono">
+        <input type="text" matInput formControlName="tiempoDisponible">
         <mat-icon matPrefix class="icon">av_timer</mat-icon>
       </mat-form-field>
       <br>
       <mat-form-field class="">
       <mat-label>Hora para ejercitarse</mat-label>
-        <input type="time" matInput formControlName="email">
+        <input type="time" matInput formControlName="hora_entreno">
         <mat-icon matPrefix class="icon">access_alarm</mat-icon>
       </mat-form-field>
       <div>

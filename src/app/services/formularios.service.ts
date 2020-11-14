@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 
@@ -16,7 +17,7 @@ const HttpHeader = {
 
 export class FormulariosService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   login(credenciales): Observable<any>{
     let url = dominio+"/login";
@@ -24,20 +25,26 @@ export class FormulariosService {
   }
 
   isLogin(){
-    let islog =localStorage.getItem("isLogin") === "Accepted";
+    let islog = localStorage.getItem("isLogin") === "valido";
     return islog;
   }
 
   guardarToken(){
-    localStorage.setItem("isLogin","Accepted");
+    localStorage.setItem("isLogin","valido");
   }
 
   logout(){
     localStorage.removeItem("isLogin");
+    this.router.navigateByUrl("/login");
   }
 
   getDoctores():Observable<any>{
     let url = dominio + '/doctor';
+    return this.http.get(url,HttpHeader);
+  }
+
+  getNombreDoctores():Observable<any>{
+    let url = dominio + '/nombredoc';
     return this.http.get(url,HttpHeader);
   }
 
